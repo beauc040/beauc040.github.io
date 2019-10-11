@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    font-family: Arial;
+}
+
+#passwords-container {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#passwords {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#passwords tbody:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#passwords tbody:nth-child(even):hover {
+    background-color: #dadada;
+}
+
+#passwords tbody:nth-child(odd):hover {
+    background-color: #fafafa;
+}
+
+td {
+    width: 25%;
+}
