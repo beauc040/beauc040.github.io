@@ -138,4 +138,4 @@ function updateLength() {
     lengthval.innerHTML = maxlength;
 }
 
-window.onload = updateLength;
+window.onload = function () { updateLength(); listPasswords(); }
