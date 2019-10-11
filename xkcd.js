@@ -130,3 +130,12 @@ function listPasswords() {
         createPassword();
     }
 }
+
+function updateLength() {
+    var maxlength = document.getElementById("maxlength").value;
+    var lengthval = document.getElementById("lengthval");
+
+    lengthval.innerHTML = maxlength;
+}
+
+window.onload = updateLength;
