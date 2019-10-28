@@ -1,0 +1,45 @@
+body {
+    font-family: Calibri, Arial, Sans-serif;
+    background-color: #fffafa;
+}
+
+.header {
+    text-align: center
+}
+
+form {
+    text-align: center;
+    color: #448;
+}
+
+.checkboxes {
+    width: 25%;
+    float: center;
+    margin: auto;
+}
+
+.checkboxes li {
+    display:block;
+    float: left;
+    width: 25%;
+    text-align: left;
+}
+
+button {
+    clear: both;
+    display: block;
+    margin: auto;
+    margin-top: 120px;
+}
+
+#results {
+    margin: auto;
+}
+
+#map {
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

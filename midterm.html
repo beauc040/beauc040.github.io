@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Routstaurants</title>
+    <link rel="stylesheet" type="text/css" href="midterm.css"/>
+    <script type="text/javascript" src="midterm.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h2>Routstaurants</h2>
+        <p>Enter two locations to get a route.
+        <br>Select a type of establishment to see places along the way.
+        <br>Hover over markers on map to see what's nearby, and click to add to the route.
+    </div>
+    <form name="route">
+        <label for="loc1">Start Location:</label>
+        <input type="text" id="loc1"/>
+        <label for="loc2">End Location:</label>
+        <input type="text" id="loc2"/>
+    </form>
+    <form name="criteria">
+        <ul class="checkboxes">
+            <li><input type="checkbox" name="categories" value="4d4b7105d754a06374d81259">All Food</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d14e941735">American</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d145941735">Chinese</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d111941735">Japanese</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d10f941735">Indian</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d110941735">Italian</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d1c1941735">Mexican</input></li>
+            <li><input type="checkbox" name="categories" value="52e81612bcbc57f1066b79f4">Buffet</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d16c941735">Burger</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d16d941735,4bf58dd8d48988d1e0931735">Coffee</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d1ce941735">Seafood</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d1cc941735">Steakhouse</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d1d1941735">Pasta</input></li>
+            <li><input type="checkbox" name="categories" value="4bf58dd8d48988d116941735">Bar</input></li>
+        </ul>
+    </form>
+    <button id="submit" onclick="search">Search</button>
+
+    <div id="map"></div>
+    <table id="results"></table>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSV6RRMfCgmqb4YoHqubF1tDgW2mCCtP8&callback=initMap">
+    </script>
+</body>
+</html>
