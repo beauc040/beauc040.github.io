@@ -68,8 +68,6 @@ function addMarker(loc) {
  * Gets list of lat,lon pairs, and calls searchLocation for each
  */
 async function getLocations(resp) {
-    console.log(resp);
-
     let route = resp.routes[0].overview_path;
 
     if (route.length <= 0) return [];
@@ -80,11 +78,9 @@ async function getLocations(resp) {
     let rows = new Set();
     let locs = new Set();
     for(let i = 0; i < route.length; i+=10) {
-        console.log(i)
         let loc = route[i];
         // Returns list of "name,nicelocation,lat,lng"
         let venuesAt = await searchLocation(loc.lat(), loc.lng());
-        console.log(venuesAt);
         for (let v of venuesAt) {
             v = v.split(',');
             // Nice location might cause an extra element if it is coordinates
@@ -168,18 +164,9 @@ async function searchLocation(lat, lon) {
         let loc = v.location;
         if (loc.address != null) loc = loc.address;
         else loc = loc.lat.toFixed(5) + ', ' + loc.lng.toFixed(5);
-        returnlst.push(`${v.name},${loc},${v.location.lat},${v.location.lng}`)
+        let name = v.name;
+        if (v.rating != null) name += '(' + v.rating + '/10)';
+        returnlst.push(`${name},${loc},${v.location.lat},${v.location.lng}`)
     }
     return returnlst;
-}
-
-/**
- * Called by Search button
- */
-function search() {
-    let locs = getLocations();
-    let nearLocs = [];
-    for (let i = 0; i < locs.length; i++) {
-        
-    }
 }
