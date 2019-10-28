@@ -143,8 +143,8 @@ async function searchLocation(lat, lon) {
     let m = String(today.getMonth() + 1).padStart(2, '0');
     let y = String(today.getFullYear());
     let todayString = y + m + d;
-    let client_id = 'TA4WC5VJUVACXV2Z2EYBLFTMS4A1C45FKAPWFH3WZDFEL0UC';
-    let client_secret = 'PQINDNPSVFNL410EMWUT1VX03OC1WPDHIELRU2J41CL1LXNB';
+    let client_id = 'J4IRPMTZPKMO1DBRNKYBCVYOXTNBPNQFSPZEWUGYCZEVY2YJ';
+    let client_secret = 'P3X4KE3ZD3D2P5MZS1BQABO1NC3MCGULME5USIYAEXABDLEZ';
     let url = `https://api.foursquare.com/v2/venues/search?client_id=${client_id}&client_secret=${client_secret}&v=${todayString}`;
     let categories = getCategories();
     let criteria = `&ll=${lat},${lon}&categoryId=${categories}&radius=500`;
