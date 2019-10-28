@@ -41,6 +41,7 @@ button {
 
 #results {
     margin: auto;
+    margin-bottom: 30px;
 }
 
 #map {
