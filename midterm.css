@@ -7,6 +7,13 @@ body {
     text-align: center
 }
 
+.footer {
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    font-size: 10;
+}
+
 form {
     text-align: center;
     color: #448;
